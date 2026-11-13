@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="glow-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="glow-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+      <circle cx="40" cy="40" r="1" fill="#64748b" fill-opacity="0.4" />
+    </pattern>
+
+    <style>
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+        font-weight: 800;
+        font-size: 46px;
+        fill: url(#primary-grad);
+        letter-spacing: -0.5px;
+      }
+      .subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        fill: #94a3b8;
+      }
+      .tagline {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        fill: #38bdf8;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #e2e8f0;
+      }
+      .browser-icon-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+        fill: #cbd5e1;
+      }
+
+      /* CSS Keyframe Animations */
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-10px) scale(1.03); }
+      }
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(8px); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.25; transform: scale(1); }
+        50% { opacity: 0.55; transform: scale(1.12); }
+      }
+      @keyframes dataStream {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes orbMove {
+        0%, 100% { cx: 200px; cy: 100px; }
+        50% { cx: 280px; cy: 140px; }
+      }
+
+      .floating-orb-1 {
+        animation: orbMove 12s ease-in-out infinite;
+      }
+      .pulse-ring {
+        animation: pulseGlow 6s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .stream-line {
+        stroke-dasharray: 12, 12;
+        animation: dataStream 14s linear infinite;
+      }
+      .floating-card-1 {
+        animation: floatSlow 7s ease-in-out infinite;
+      }
+      .floating-card-2 {
+        animation: floatReverse 8s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="420" fill="url(#bg-grad)" rx="16" />
+  <rect width="1200" height="420" fill="url(#cyber-grid)" rx="16" />
+
+  <!-- Dynamic Glowing Background Orbs (Non-obtrusive, purely aesthetic) -->
+  <circle class="floating-orb-1 pulse-ring" cx="200" cy="100" r="160" fill="url(#glow-cyan)" />
+  <circle class="pulse-ring" cx="1050" cy="220" r="220" fill="url(#glow-purple)" />
+  <circle class="pulse-ring" cx="600" cy="380" r="140" fill="url(#glow-cyan)" />
+
+  <!-- Animated Background Matrix Connectivity Lines -->
+  <g opacity="0.35">
+    <path class="stream-line" d="M 100 350 Q 300 280 600 340 T 1100 280" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <path class="stream-line" d="M 150 70 Q 500 140 850 60 T 1150 120" fill="none" stroke="#a855f7" stroke-width="1.5" />
+  </g>
+
+  <!-- Left Side: Interactive Dynamic Testing Nodes Graphic -->
+  <g class="floating-card-1" transform="translate(80, 75)">
+    <!-- Main Cloud Terminal Container -->
+    <rect width="260" height="270" rx="14" fill="#0f172a" fill-opacity="0.85" stroke="#1e293b" stroke-width="1.5" filter="drop-shadow(0 10px 25px rgba(0,0,0,0.5))" />
+    <rect width="260" height="34" rx="14" fill="#1e293b" fill-opacity="0.9" />
+    <!-- Window dots -->
+    <circle cx="22" cy="17" r="5" fill="#ef4444" />
+    <circle cx="38" cy="17" r="5" fill="#f59e0b" />
+    <circle cx="54" cy="17" r="5" fill="#10b981" />
+    <text x="145" y="22" font-family="-apple-system, sans-serif" font-size="11" fill="#64748b" text-anchor="middle" font-weight="600">GRID CONSOLE: ACTIVE</text>
+
+    <!-- Browser Nodes inside preview -->
+    <g transform="translate(18, 52)">
+      <!-- Chrome Node -->
+      <rect width="224" height="42" rx="8" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
+      <circle cx="24" cy="21" r="10" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1.5" />
+      <text x="24" y="25" text-anchor="middle" class="browser-icon-text" fill="#60a5fa">Cr</text>
+      <text x="46" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Chrome v130 (Headless)</text>
+      <text x="46" y="33" font-family="-apple-system, sans-serif" font-size="10" fill="#10b981">● Parallel Session #01 • OK</text>
+      <rect x="180" y="14" width="34" height="15" rx="4" fill="#065f46" />
+      <text x="197" y="25" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#34d399" font-weight="700">PASS</text>
+    </g>
+
+    <g transform="translate(18, 104)">
+      <!-- Firefox Node -->
+      <rect width="224" height="42" rx="8" fill="#1e293b" stroke="#f97316" stroke-width="1" />
+      <circle cx="24" cy="21" r="10" fill="#f97316" fill-opacity="0.2" stroke="#f97316" stroke-width="1.5" />
+      <text x="24" y="25" text-anchor="middle" class="browser-icon-text" fill="#fb923c">Fx</text>
+      <text x="46" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Firefox v132 (Gecko)</text>
+      <text x="46" y="33" font-family="-apple-system, sans-serif" font-size="10" fill="#10b981">● Parallel Session #02 • OK</text>
+      <rect x="180" y="14" width="34" height="15" rx="4" fill="#065f46" />
+      <text x="197" y="25" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#34d399" font-weight="700">PASS</text>
+    </g>
+
+    <g transform="translate(18, 156)">
+      <!-- WebKit / Safari Node -->
+      <rect width="224" height="42" rx="8" fill="#1e293b" stroke="#06b6d4" stroke-width="1" />
+      <circle cx="24" cy="21" r="10" fill="#06b6d4" fill-opacity="0.2" stroke="#06b6d4" stroke-width="1.5" />
+      <text x="24" y="25" text-anchor="middle" class="browser-icon-text" fill="#22d3ee">Wk</text>
+      <text x="46" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Safari / WebKit 18.0</text>
+      <text x="46" y="33" font-family="-apple-system, sans-serif" font-size="10" fill="#38bdf8">● Parallel Session #03 • RUNNING</text>
+      <rect x="180" y="14" width="34" height="15" rx="4" fill="#075985" />
+      <text x="197" y="25" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#38bdf8" font-weight="700">SYNC</text>
+    </g>
+
+    <g transform="translate(18, 208)">
+      <!-- Real Device Android Node -->
+      <rect width="224" height="42" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1" />
+      <circle cx="24" cy="21" r="10" fill="#a855f7" fill-opacity="0.2" stroke="#a855f7" stroke-width="1.5" />
+      <text x="24" y="25" text-anchor="middle" class="browser-icon-text" fill="#c084fc">Mob</text>
+      <text x="46" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Pixel 8 / iPhone 16 Real</text>
+      <text x="46" y="33" font-family="-apple-system, sans-serif" font-size="10" fill="#a855f7">● Cloud Appium Grid • READY</text>
+      <rect x="180" y="14" width="34" height="15" rx="4" fill="#581c87" />
+      <text x="197" y="25" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="9" fill="#d8b4fe" font-weight="700">TEST</text>
+    </g>
+  </g>
+
+  <!-- Foreground Content: Always in Front & High Contrast -->
+  <g transform="translate(400, 105)">
+    <!-- Tagline Badge -->
+    <rect x="0" y="0" width="280" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.5" />
+    <circle cx="14" cy="14" r="5" fill="#38bdf8" />
+    <text x="28" y="19" class="tagline">CLOUD TEST INFRASTRUCTURE</text>
+
+    <!-- Main Title (Strictly Foreground) -->
+    <text x="0" y="70" class="title">Cross-Browser Testing Cloud</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="106" class="subtitle">Curated Landscape of Commercial Clouds &amp; Open-Source Grids</text>
+
+    <!-- Feature Description -->
+    <text x="0" y="138" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#94a3b8">
+      Zero-flakiness parallel execution across 10,000+ real browser, OS, and mobile device combinations.
+    </text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 175)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="138" height="36" rx="8" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+        <circle cx="18" cy="18" r="4" fill="#38bdf8" />
+        <text x="32" y="23" class="pill-text">⚡ Selenium Grid 4</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(150, 0)">
+        <rect width="130" height="36" rx="8" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+        <circle cx="18" cy="18" r="4" fill="#a855f7" />
+        <text x="32" y="23" class="pill-text">🎭 Playwright</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(292, 0)">
+        <rect width="130" height="36" rx="8" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+        <circle cx="18" cy="18" r="4" fill="#10b981" />
+        <text x="32" y="23" class="pill-text">🚀 Real Devices</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(434, 0)">
+        <rect width="150" height="36" rx="8" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+        <circle cx="18" cy="18" r="4" fill="#f59e0b" />
+        <text x="32" y="23" class="pill-text">☸️ Moon Kubernetes</text>
+      </g>
+      <!-- Pill 5 -->
+      <g transform="translate(596, 0)">
+        <rect width="140" height="36" rx="8" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+        <circle cx="18" cy="18" r="4" fill="#ec4899" />
+        <text x="32" y="23" class="pill-text">🤖 AI Test Authoring</text>
+      </g>
+    </g>
+  </g>
+</svg>
